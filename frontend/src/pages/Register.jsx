@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Register.css"; // Import CSS for styling
 import "../App.css";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL = https://quizdepth.onrender.com;
 
 const Register = () => {
     const [name, setName] = useState("");
