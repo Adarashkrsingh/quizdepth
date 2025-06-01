@@ -4,7 +4,7 @@ import axios from "axios";
 import "../App.css";
 import "./UserReportsCheck.css";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL = https://quizdepth.onrender.com;
 
 const UserReportsCheck = () => {
     const { id } = useParams();
