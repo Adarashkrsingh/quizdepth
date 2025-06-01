@@ -4,7 +4,7 @@ import axios from "axios";
 import "../App.css";
 import "./UserWrittenReports.css"; // ✅ Import the new CSS file
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL = https://quizdepth.onrender.com;
 
 const UserWrittenReports = () => {
     const [reports, setReports] = useState([]);
