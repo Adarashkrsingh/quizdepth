@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import "../App.css";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL = https://quizdepth.onrender.com;
 
 const Home = () => {
     const navigate = useNavigate();
