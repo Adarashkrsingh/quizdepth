@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Login.css";
 import "../App.css";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL =https://quizdepth.onrender.com;
 
 const Login = () => {
     const [email, setEmail] = useState("");
