@@ -1,0 +1,262 @@
+/* ✅ MAIN QUIZ CONTAINER */
+.admin-quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 0 auto;
+    background: linear-gradient(to right, #4b0082, #6a11cb);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ HEADING */
+.admin-quiz-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ✅ GRID LAYOUT */
+.quiz-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quiz-header h2{
+    color: white;
+}
+
+/* ✅ QUIZ LIST (Ensures quizzes appear below the title & button) */
+.quiz-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ✅ QUIZ BOX */
+.quiz-box {
+    background: #ffffff;
+    color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 320px;
+    min-height: 350px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow-x: hidden;
+}
+
+/* ✅ HOVER EFFECT */
+.quiz-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ QUIZ TITLE */
+.quiz-box h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* ✅ QUIZ DETAILS */
+.quiz-box p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* ✅ BUTTONS */
+.create-btn,
+.add-question-btn,
+.submit-btn, .view-questions-btn {
+    background: linear-gradient(to right, #ff4d79, #ff6a95);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    width: 100%;
+}
+
+.create-btn:hover,
+.add-question-btn:hover,
+.submit-btn:hover, .view-questions-btn:hover {
+    background: linear-gradient(to right, #e63e68, #ff4d79);
+    transform: translateY(-2px);
+}
+
+/* ✅ AI BUTTON */
+.ai-btn {
+    background: linear-gradient(to right, #ff8a00, #ff3d00);
+}
+
+.ai-btn:hover {
+    background: linear-gradient(to right, #ff6a00, #e63d00);
+}
+
+/* ✅ SCROLLABLE QUESTION LIST */
+.display-ans {
+    list-style: none;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    max-height: 140px;
+    overflow-y: auto;
+    font-size: 14px;
+    color: #444;
+    width: 100%;
+    text-align: left;
+}
+
+/* ✅ MODAL STYLING */
+.modal {
+    position: fixed;
+    left: 48%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    /* max-width: 95%; Ensure it doesn't overflow on small screens */
+}
+
+#add_question_modal{
+    top: 80%;
+}
+
+/* ✅ MODAL BOX */
+.modal-box {
+    position: relative; /* Ensure the close button is positioned relative to this */
+    padding: 25px;
+    border-radius: 12px;
+    background: white;
+    text-align: center;
+    max-width: 95%; /* Adjust for smaller screens */
+}
+
+/* ✅ RESPONSIVE MODAL */
+@media (max-width: 480px) {
+    .modal {
+        width: 80%; /* Use 95% width for extra small screens */
+        padding: 15px; /* Reduce padding for small screens */
+    }
+
+    .modal-box {
+        padding: 15px;
+    }
+}
+
+/* ✅ FADE-IN ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* ✅ CLOSE BUTTON */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    position: absolute;
+    z-index: 9999;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    color: #333; /* Ensure it contrasts with the background */
+    transition: color 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+    color: #ff4d79;
+}
+
+/* ✅ INPUT FIELDS */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px; /* Bigger textarea */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    resize: vertical; /* Allows users to resize vertically */
+    background: #f9f9f9;
+    color: #333;
+    font-family: "Arial", sans-serif;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* ✅ Focus Effect */
+textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+    outline: none;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    textarea {
+        min-height: 100px; /* Adjust for smaller screens */
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .close-btn {
+        display: block !important;
+        visibility: visible !important;
+    }
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .admin-quiz-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .quiz-list {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}

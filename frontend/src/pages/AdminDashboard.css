@@ -1,0 +1,154 @@
+/* ✅ Main container */
+.admin-dashboard {
+    margin-top: 60px;
+    margin-left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background: #f5f6fa;
+    min-height: 90vh;
+    padding: 20px;
+}
+
+/* ✅ Dashboard Content */
+.dashboard-content {
+    width: 90%;
+    /* margin-left: 250px; */
+    max-height: 90vh;
+    overflow-y: auto;
+    max-width: 1000px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* ✅ Title */
+.dashboard-content h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* ✅ Stats Section */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ✅ Statistic Cards */
+.stat-card {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+    transition: 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ✅ Users Table */
+.table-title {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: left;
+}
+
+/* ✅ Table Container */
+.table-container {
+    width: 90%;
+    overflow-x: auto;
+    margin-top: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+thead {
+    background: #2575fc;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-content {
+        margin-top: 200px;
+        width: 100%;
+        margin-left: 0px;
+        padding: 15px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-content{
+        margin-left: 0px;
+    }
+    .dashboard-content h1 {
+        font-size: 22px;
+    }
+    .stat-card{
+        width: 80%;
+        height: 80%;
+    }
+    .table-container {
+        padding: 10px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
