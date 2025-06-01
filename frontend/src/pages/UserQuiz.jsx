@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL =https://quizdepth.onrender.com;
 
 const UserQuiz = () => {
     const [quizzes, setQuizzes] = useState([]);
