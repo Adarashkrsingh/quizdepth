@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../App.css";
 import "./TakeWrittenTest.css"; // ✅ Importing the new CSS file
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL =https://quizdepth.onrender.com;
 
 const TakeWrittenTest = () => {
     const { id } = useParams();
