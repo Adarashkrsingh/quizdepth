@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./UserReports.css"; // Import the specific CSS file for UserReports
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+const BACKEND_URL = https://quizdepth.onrender.com;
 
 const UserReports = () => {
     const [reports, setReports] = useState([]);
